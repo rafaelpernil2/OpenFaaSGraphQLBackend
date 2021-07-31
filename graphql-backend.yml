@@ -4,7 +4,7 @@ provider:
   gateway: http://192.168.49.2:31112
 functions:
   graphql-backend:
-    lang: custom-graphql-template
+    lang: node-typescript-express
     handler: ./graphql-backend
     image: rafaelpernil/graphql-backend:latest
 
