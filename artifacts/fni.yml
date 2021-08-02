@@ -1,0 +1,17 @@
+apiVersion: openfaas.com/v1alpha2
+kind: FunctionIngress
+metadata:
+  name: graphql-backend
+  namespace: openfaas
+spec:
+  domain: "allotr.eu"
+  function: "graphql-backend"
+  ingressType: "nginx"
+  tls:
+    enabled: true
+    issuerRef:
+      name: "letsencrypt-staging"
+      # Change to ClusterIssuer if required
+      # https://docs.cert-manager.io/en/latest/reference/clusterissuers.html
+      # https://docs.cert-manager.io/en/latest/reference/issuers.html
+      kind: "Issuer"
