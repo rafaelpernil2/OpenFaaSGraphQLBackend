@@ -16,6 +16,7 @@ spec:
         prometheus.io.scrape: 'false'
     spec:
       serviceAccountName: ingress-operator
+      automountServiceAccountToken: false
       containers:
       - name: operator
         image: openfaas/ingress-operator:0.6.6
